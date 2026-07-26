@@ -1,0 +1,757 @@
+html{
+    overflow-x: hidden;
+    background-color:  #1c1c1c;
+
+}
+body {
+    overflow-x: hidden;
+    
+}
+.video-fondo {
+    
+    position: fixed;       /* Fijo sobre toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Mantiene proporción y cubre toda el área */
+    object-position: top;  /* Muestra la parte superior del video si quieres */
+    z-index: -100;   
+    opacity: 0.6;        /* Detrás de todo el contenido */
+}
+.horizontal {
+    background: linear-gradient(to left, #a47, #2ff);
+    
+    width: 100%;
+    height: 130px;
+    margin-bottom: 50px;
+    justify-content: flex-end;
+    align-items: center; 
+    position: relative;
+    z-index: 110;
+}
+
+.box_father {
+    
+    width: 82%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); 
+    gap: 0px; 
+    column-gap: 50px;
+}
+
+.title_1 {
+    color: #a47;
+    text-align: center;
+}
+
+.nav_hzt {
+    font-size: 20px;
+    
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+    margin-left: 55%;  
+    position: relative;
+    z-index: 1200;
+    left: -15%;
+
+}
+nav a {
+    text-decoration: none;
+    color: #a47;
+    font-weight: 700;
+}
+.subtitle_1 {
+    position: relative;
+    color: #a47;
+    top: 50px;
+    left: 20px;
+    font-family: georgia;
+    font-size: 30px
+    
+}
+
+.caja_1 {
+    position: relative;
+    background: linear-gradient(
+        to left,
+        #aa4477cc,
+        #22ffffcc
+    );
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 2px 2px 10px #aaa; 
+    height: 270px;
+    
+    padding: 20px;
+    
+}
+.caja_1:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+.caja_2 {
+    position: relative;
+    background: linear-gradient(
+        to left,
+        #aa4477cc,
+        #22ffffcc
+    );
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 2px 2px 10px #aaa;
+    height: 270px;
+    padding: 20px;
+}
+.caja_2:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+.caja_3 {
+    position: relative;
+    background: linear-gradient(
+        to left,
+        #aa4477cc,
+        #22ffffcc
+    );
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 2px 2px 10px #aaa;
+    height: 270px;
+    padding: 20px;
+}
+.caja_3:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+
+.caja_4 {
+    position: relative;
+    background: linear-gradient(
+        to left,
+        #aa4477cc,
+        #22ffffcc
+    );
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 2px 2px 10px #aaa;
+    height: 270px;
+    padding: 20px;
+}
+.caja_4:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.bottom_1 {
+    background: linear-gradient(
+        to right,
+        #FF5454,
+        #a47
+    );
+    position: relative;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    padding: 15px;
+    top: -185px;
+    left: 83%;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+    font-family: Times New Roman;
+    
+    
+}
+.bottom_1:hover {
+    box-shadow: 0 10px 10px rgba(0,0,0,0.35);
+    transform: translateY(-2px);
+    transform: scale(1.1);
+}
+
+
+
+.image_catalogo {
+    width: 160px;
+    height: 160px;
+    margin-top: 50px;
+    
+}
+
+.name_comida {
+    font-size: 20px;
+    padding-left: 25px;
+    color: #a47;
+    font-weight: 100;
+}
+.description_3 {
+    color: #a47;
+    font-weight: 100;
+    font-size: 20px;
+    position: absolute;
+    left: 260px;
+    top: 80px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.caja_1:hover .description_3,
+.caja_2:hover .description_3,
+.caja_3:hover .description_3,
+.caja_4:hover .description_3 {
+    opacity: 1;
+}
+
+
+.info_1 {
+    color: aliceblue;
+    font-weight: 100px;
+        max-width: 298px;  
+        position: absolute;
+        left: 55%;
+        top: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        word-break: normal;
+        overflow-wrap: normal;
+        white-space: normal;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none
+}
+.caja_2:hover .info_1,
+.caja_3:hover .info_1,
+.caja_1:hover .info_1,
+.caja_4:hover .info_1 {
+    opacity: 1;
+}
+
+.precio_1 {
+    position: absolute;
+    transform: none !important;
+    pointer-events: none;
+    background: linear-gradient(
+        to left,
+        #3f3,
+        #2feeef
+    );
+    border-radius: 10px 10px 0 0;
+    width: 20%;
+    height: 20px;
+    bottom: 0px;
+    left: 40%;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.animacion_1 {
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #aaa;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    width: 218px;
+    height: 672px;
+    left: 85%;
+    top: 276px;
+    
+}
+.animacion_1:hover {
+    transform: translateY(2px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+.animacion_1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.1);
+    transition: opacity 4s ease;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: opacity 2s ease-in-out;
+}
+.animacion_1 img.activo {
+    opacity: 1;
+}
+
+.formula_1 {
+    font-family: Verdana;
+    font-size: 23px;
+    line-height: 1.1;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    font-weight: 100px;
+
+    opacity: 0;
+    pointer-events: none;
+}
+@keyframes entrarTexto {
+    0% {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.9);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    }
+}
+@keyframes salirTexto {
+    0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    }
+    100% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.9);
+    }
+}
+
+.formula_2 {
+    font-family: Verdana;
+    font-size: 23px;
+    line-height: 1.1;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    z-index: 2;
+    font-weight: 150px; 
+
+    opacity: 0;
+}
+@keyframes entrarGiro {
+    0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.6);
+    }
+    100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    }
+}
+@keyframes salirGiro {
+    0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    }
+    100% {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.6);
+    }
+}
+
+.video_CDE {
+    
+    width: 29%;      
+    height: 100%;        
+    object-fit: cover;
+    margin-left: 72%;
+    margin-top: -86px;
+    object-position: 0 35%;
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(to left,#2ff 20%, transparent 100%);
+    mask-image: linear-gradient(to left, #2ff 58%, transparent 90%);
+    
+}
+/*OVERLAY*/
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+}
+
+/* Modal del click sobre las opciones*/
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 400px;
+    padding: 25px;
+    background: linear-gradient(to top, #aa4477, #22ffff);
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    opacity:0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 1000;
+    color: #fff;
+    min-height: 220px; 
+    height: auto;       
+    padding: 30px;
+    overflow: visible;
+}
+/* Estados activos */
+.overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.activo {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Botón cerrar */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #00aa0a;
+    cursor: pointer;
+    z-index: 9999;
+}
+.modal,
+.overlay {
+    transition: none;
+}
+.modal h2 {
+        color: #a47;
+}
+.modal p  {
+        color: #000;
+        font-weight: 100px;
+}
+.btn-soporte {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #a47;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-weight: 100;
+}
+
+.btn-soporte:hover {
+    background: #2ff;
+    color: #000;
+}
+
+/*Styles de el boton y contenido de btn soporte*/
+.modal-soporte h2 {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 26px;
+    top: -30px;
+    left: 34%;
+    
+}
+.modal-soporte #modalContenido {
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.modal-soporte #modalContenido {
+    color: #000;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 100;
+}
+.modal-soporte .btn-soporte {
+    background: linear-gradient(to right, #b11226, #a47);
+    color: #111;
+    border: none;
+    padding: 12px 35px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 34%;
+    margin-top: 19%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-soporte .btn-soporte:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.item-soporte {
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+
+
+
+#flechaVolver {
+    display: none;           
+    width: 40px;             
+    height: 40px;
+    cursor: pointer;
+    position: absolute;      
+    top: 235px;         
+    left: 86%;              
+    background: linear-gradient(45deg, #aa7, #2ff);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+    transition: 0.3s ease; 
+}
+#flechaVolver:hover {
+    transform: scale(1.1);
+    background-color: #a47;
+}
+
+
+.item-soporte {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#flechaSolucion {
+    position: absolute;  
+    bottom: 15px;        
+    right: 15px;          
+    font-size: 26px;
+    cursor: pointer;
+    background-color: #2ff;
+    color: #3f3;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+#flechaSolucion:hover {
+    transform: scale(1.1);
+    background-color: #a47;
+}
+
+/*descuento */
+.caja_descuento::before {
+    content: "70% OFF";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #ff004c, #ff9f00);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(255,0,76,0.6);
+    z-index: 5;
+    animation: pulso 1.5s infinite;
+}
+
+/* Asegura posición */
+.caja_1, .caja_2, .caja_3, .caja_4 {
+    position: relative;
+}
+
+/* Animación */
+@keyframes pulso {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+#modal input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* Badge descuento */
+.caja_descuento::before {
+    content: "70% OFF";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: red;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.precio {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    background: rgba(0,0,0,0.6);
+    padding: 8px 14px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #00ff66;
+
+    box-shadow: 0 0 10px rgba(0,255,100,0.5);
+}
+
+.vip-ok {
+    text-align: center;
+    padding: 10px;
+}
+
+.vip-msg {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* INPUTS VIP */
+.vip-card input {
+    width: 100%;
+    padding: 14px 15px;
+    margin-top: 12px;
+    margin-left: -10px;
+
+    border-radius: 12px;
+    border: 2px solid transparent;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 15px;
+
+    outline: none;
+    transition: 
+        border 0.3s ease,
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+.vip-card input:first-of-type {
+    margin-top: 20px;
+}
+
+.vip-card input:last-of-type {
+    margin-top: 10px; 
+}
+
+/* AL ENFOCAR */
+.vip-card input:focus {
+    border: 2px solid #ffb703;
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+.vip-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #a47, #2ff);
+    color: #fff;
+    margin-top: 20px;
+}
+/* BOTÓN VALIDAR VIP */
+.btn-vip {
+    margin-top: 15px;
+    margin-left: 80px;
+    width: 50%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 12px;
+    
+    background: linear-gradient(135deg, #ffb703, #fb8500);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+/* EFECTO HOVER */
+.btn-vip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(251, 133, 0, 0.5);
+    filter: brightness(1.1);
+}
+
+/* EFECTO CLICK */
+.btn-vip:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 10px rgba(251, 133, 0, 0.4);
+}
+#modalTitulo {
+    text-align: center;
+}
+.vip-card p {
+    text-align: center;
+}
+
+/* CONTENEDOR DEL MODAL - ESCENA */
+.menu-modal-escena {
+    position: relative;
+    width: 100%;
+    height: 80%; 
+    margin-bottom: -30px;
+    min-height: 150px;
+    padding-top: 40px;
+    overflow: hidden;
+    z-index: 1;
+}
+/*Luna saliendo desde abajo */
+.planeta-cde {
+    position: absolute;
+    bottom: -320px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 456px;
+    z-index: 1;
+    clip-path: inset(0 0 50% 0);
+}
+
+/*Pollo encima de la luna */
+.pollo-astronauta {
+    position: absolute;
+    bottom: 15px;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    z-index: 2;
+    animation: flotarPollo 4s ease-in-out infinite;
+}
+
+/*Texto arriba de todo */
+.menu-texto {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+    max-width: 80%;
+    margin: auto;
+    padding-bottom: 200px;
+}
+@keyframes flotarPollo {
+    0%   { transform: translateX(-50%) translateY(0); }
+    50%  { transform: translateX(-50%) translateY(-8px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- link de png,icon y styles -->
+    <link rel="stylesheet" href="/estilos.css">
+    <link rel="icon" href="/ChatGPT Image 5 feb 2026, 17_09_59.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDE OFICIAL</title>
+</head>
+<body>
+    <!-- Overlay oscuro -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Ventana centrada -->
+<div class="modal" id="modal">
+    <button class="cerrar" id="cerrarModal">✕</button>
+
+    <!-- Flecha independiente -->
+    <span id="flechaVolver"></span>
+
+    <h2 id="modalTitulo">Soporte CDE</h2>
+    <div id="modalContenido"></div>
+
+    <button id="btnSoporteAceptar" class="btn-soporte">Aceptar</button>
+</div>
+
+    <!--video de fondo-->
+</div>
+    <video class="video-fondo" autoplay muted loop playsinline>
+        <source src="/videoplayback (1).mp4" type="video/mp4">
+    </video>
+
+    <!-- Iniciacion de titulo -->
+    <h1 class="title_1">CDE OFICIAL</h1>
+
+<!-- Caja horizontal con opciones -->
+    <div class="horizontal">
+        <p class="subtitle_1">CDE PEDIDO FACILES</p>
+        <nav>
+            <nav class="nav_hzt">
+                <a href="#" id="btnMenu">Menu</a>
+                <a href="#" id="btnOfertas">Ofertas</a>
+                <a href="#" id="btnSoporte">Soporte</a>
+            </nav>
+        </nav>
+        
+
+        <!-- Video CDE -->
+        <video class="video_CDE" src="/presentacion_CDE.mp4" autoplay muted loop></video></div>
+
+        <!-- Caja padre junto a sus hijos, el cual se muestra los productos de CDE -->
+    <div class="box_father">
+        
+        <div>
+            <div class="caja_1">
+                <div class="precio_1" data-precio="25000">$30.000</div>
+                <img class="image_catalogo" src="/fb7bbe3d-e6ef-4574-bc7e-eab5beb64426_1761728561929.png" alt=""><p class="name_comida">Pollo CDE</p>
+                <p class="description_3">Descripcion</p><p class="info_1">Pollo apando, papas a la francesa, gaseosa y salsa al gusto</p>
+            </div>
+            <button class="bottom_1">Agregar</button>
+        </div>       
+        <div>
+            <div class="caja_2">
+                <div class="precio_1" data-precio="25000">$22.000</div>
+                <img class="image_catalogo" src="/crispy-burger-removebg-preview.png" alt=""><p class="name_comida">Hambur CDE</p> <p class="description_3">Descripcion</p><p class="info_1">Carne de res, papitas, lechuga, pan, pollo apando y salsa al gusto.</p>
+            </div>
+            <button class="bottom_1">Agregar</button>
+        </div>
+        <div>
+            <div class="caja_3">
+                <div class="precio_1" data-precio="25000">$25.000</div>
+                <img class="image_catalogo" src="/mazorca-removebg-preview.png" alt="">
+                <p class="name_comida">Mazorcada</p> <p class="description_3">Descripcion</p><p class="info_1">Carne de res, chorizo, maiz dulce, papricas y salsa al gusto.</p>
+            </div>
+            <button class="bottom_1">Agregar</button>
+        </div>
+        <div>    
+        <div class="caja_4">
+            <div class="precio_1" data-precio="25000">$28.000</div>
+            <img class="image_catalogo" src="/crispy-loaded-french-fries-with-cheese-sauce-and-bacon-photo-removebg-preview.png" alt="">
+            <p class="name_comida">Salchi CDE</p> <p class="description_3">Descripcion</p><p class="info_1">Carne de res desmechada, chorizo de las brisa, papas apanadas, queso motsarela y salsa al gusto.</p>
+        </div>
+        <button class="bottom_1">Agregar</button>
+        </div>
+    </div>
+    <!-- Anuncio con imagenes animada -->
+    <div class="animacion_1">
+            <div>
+                <img src="/pexels-lauragafforelli-5627435.png" class="one_img activo">
+                <p class="formula_1">Solo CDE tiene la formuala de otro mundo</p>
+            </div>
+            <div>
+                <img src="/carrusel_1.png" class="img_sin_texto">
+                <p class="formula_2"> Hoy el 50% de descuento en la Master CDE</p>
+            </div>
+            
+    </div>   
+</body>
+<script>
+    //animacion de imagenes de los anuncios
+    const texto1 = document.querySelector('.formula_1');
+    const texto2 = document.querySelector('.formula_2');
+    const img1 = document.querySelector('.one_img');
+    const img2 = document.querySelector('.img_sin_texto');
+    
+    const tiempoAnim = 1100;    
+    const tiempoImagen = 1000;   
+    const tiempoSlide = 3500;
+    
+    setInterval(() => {
+    
+if (img1.classList.contains('activo')) {
+        texto1.style.animation = 'salirTexto 2s ease forwards';
+        setTimeout(() => {
+        img1.classList.remove('activo');
+        img2.classList.add('activo');
+        texto2.style.animation = 'entrarGiro 3s ease forwards';
+        }, tiempoAnim);
+    
+} else {
+        texto2.style.animation = 'salirGiro 2s ease forwards';
+        setTimeout(() => {
+        img2.classList.remove('activo');
+        img1.classList.add('activo');
+        setTimeout(() => {
+            texto1.style.animation = 'entrarTexto 1s ease forwards';
+        }, tiempoImagen);
+    
+        }, tiempoAnim);
+    } 
+}, tiempoSlide);
+// ---- ELEMENTOS ----
+const overlay = document.getElementById('overlay');
+const modal = document.getElementById('modal');
+const cerrar = document.getElementById('cerrarModal');
+const titulo = document.getElementById('modalTitulo');
+const contenido = document.getElementById('modalContenido');
+const btnSoporteAceptar = document.getElementById('btnSoporteAceptar');
+const flecha = document.getElementById('flechaVolver');
+const tituloTexto = document.getElementById('tituloTexto');
+let nivelSoporte = 0;
+let modalVipActivo = false;
+
+
+// ---- ABRIR MODAL GENERAL ---- //
+
+function abrirModal(t, c) {
+    titulo.textContent = t;
+    contenido.innerHTML = c;
+    btnSoporteAceptar.style.display = 'none';
+    overlay.classList.add('activo');
+    modal.classList.add('activo');
+}
+
+// ---- CERRAR MODAL ----
+function cerrarModal() {
+    overlay.classList.remove('activo');
+    modal.classList.remove('activo');
+    modal.classList.remove('modal-soporte');
+    btnSoporteAceptar.style.display = 'none';
+    titulo.textContent = '';
+    contenido.innerHTML = '';
+}
+
+cerrar.addEventListener('click', () => {
+    if (!modalVipActivo) cerrarModal();
+});
+
+overlay.addEventListener('click', () => {
+    if (!modalVipActivo) cerrarModal();
+});
+
+// ---- BOTONES PRINCIPALES ----
+document.getElementById('btnMenu').addEventListener('click', e => {
+    e.preventDefault();
+
+    abrirModal(
+    'Menú',
+    `
+    <div class="menu-modal-escena" id="menuEscena">
+
+        <!-- Pollo astronauta -->
+        <img src="/pollo_animado.png" class="pollo-astronauta">
+        <!-- Pollo astronauta -->
+        <img src="/cde-planeta4.png" class="planeta-cde">
+
+        <!-- Texto del menú -->
+        <p class="menu-texto">
+            Explora todos los productos disponibles de CDE y arma tu pedido
+            fácilmente para disfrutar sabores de otro mundo.
+        </p>
+
+    </div>
+    `
+    
+);
+
+});
+
+
+document.getElementById('btnOfertas').addEventListener('click', e => {
+    e.preventDefault();
+    abrirModal(
+        'Tarjeta VIP CDE',
+        `
+        <div class="vip-card">
+            <p>Accede a un 70% de descuento con tu tarjeta CDE premium.</p>
+
+            <input type="text" id="vipNumero" placeholder="Número de tarjeta VIP">
+            <input type="password" id="vipCodigo" placeholder="Código de seguridad">
+
+            <button id="btnValidarVip" class="btn-vip">Validar</button>
+
+            <p class="vip-info">Válido solo para clientes CDE</p>
+        </div>
+        `
+    );
+});
+document.getElementById('btnSoporte').addEventListener('click', e => {
+    e.preventDefault();
+
+    nivelSoporte = 0;
+    modalVipActivo = false;
+
+    abrirModal(
+        'Soporte CDE',
+        `
+        <p id="soportePedido" class="item-soporte">✔ Problemas con pedidos</p>
+        <p id="soportePago" class="item-soporte">✔ Pagos y facturación</p>
+        <p id="soporteWhats" class="item-soporte">✔ Atención personalizada</p>
+        `
+    );
+
+    flecha.style.display = 'none';
+    cerrar.style.display = 'block';
+});
+
+
+// Mostrar la flecha solo cuando entras a estas opciones
+document.addEventListener('click', e => {
+    if (e.target.id === 'soportePedido') {
+    nivelSoporte = 1;
+    flecha.style.display = 'inline';
+    contenido.innerHTML = `
+        <p id="noLlego" class="item-soporte">✔ Pedido no llegó</p>
+        <p id="equivocado" class="item-soporte">✔ Producto equivocado</p>
+        <p id="retraso" class="item-soporte">✔ Retraso en entrega</p>
+    `;
+    }
+
+    // --- SOLUCIONES ---
+if (e.target.id === 'noLlego') {
+    nivelSoporte = 2;
+    contenido.innerHTML = `
+        🚚 Tu pedido fue reenviado prioritariamente.<br><br>
+        Recibirás un cupón del 20% en tu próxima compra.
+    `;
+    flecha.style.display = 'inline';
+}
+
+if (e.target.id === 'equivocado') {
+    nivelSoporte = 2;
+    contenido.innerHTML = `
+        🔄 Te enviaremos el producto correcto sin costo adicional.<br><br>
+        No es necesario devolver el anterior.
+    `;
+    flecha.style.display = 'inline';
+}
+
+if (e.target.id === 'retraso') {
+    nivelSoporte = 2;
+    contenido.innerHTML = `
+        ⏳ Tu pedido está en camino.<br><br>
+        Te damos un bono del 15% por la demora.
+    `;
+    flecha.style.display = 'inline';
+}
+
+
+if (e.target.id === 'soportePago') {
+    nivelSoporte = 1;
+    flecha.style.display = 'inline';
+    contenido.innerHTML = `
+        ✔ Pago rechazado<br>
+        ✔ Error de facturación<br>
+        ✔ Doble cobro<br><br>
+        Conserva tu comprobante de pago.
+    `;
+}
+    if (e.target.id === 'soporteWhats') {
+        window.open(
+            'https://wa.me/573001234567?text=Hola%20necesito%20ayuda%20con%20mi%20pedido%20CDE',
+            '_blank'
+        );
+    }
+});
+
+// Función para volver al menú principal de soporte
+
+
+flecha.addEventListener('click', () => {
+
+// Solución → Opciones
+if (nivelSoporte === 2) {
+    nivelSoporte = 1;
+    contenido.innerHTML = `
+        <p id="noLlego" class="item-soporte">✔ Pedido no llegó</p>
+        <p id="equivocado" class="item-soporte">✔ Producto equivocado</p>
+        <p id="retraso" class="item-soporte">✔ Retraso en entrega</p>
+    `;
+    return;
+}
+
+// Opciones → Menú soporte
+if (nivelSoporte === 1) {
+    nivelSoporte = 0;
+    flecha.style.display = 'none';
+    contenido.innerHTML = `
+        <p id="soportePedido" class="item-soporte">✔ Problemas con pedidos</p>
+        <p id="soportePago" class="item-soporte">✔ Pagos y facturación</p>
+        <p id="soporteWhats" class="item-soporte">✔ Atención personalizada</p>
+    `;
+    return;
+}
+});
+
+document.addEventListener('click', e => {
+
+    if (e.target.id === 'btnValidarVip') {
+
+        const numero = document.getElementById('vipNumero').value.trim();
+        const codigo = document.getElementById('vipCodigo').value.trim();
+
+        if (numero === 'CDE-2026' && codigo === 'VIP70') {
+
+// Aplicar descuento
+document.querySelectorAll('.precio_1').forEach(precio => {
+    const original = parseInt(precio.dataset.precio);
+    const descuento = Math.round(original * 0.3);
+    precio.textContent = `$${descuento.toLocaleString('es-CO')}`;
+});
+
+
+modalVipActivo = true;
+cerrar.style.display = 'none';
+
+// Modal VIP ACTIVADO
+titulo.textContent = '🎉 CDE ACTIVADO';
+contenido.innerHTML = `
+    <div class="vip-ok">
+        <p class="vip-msg">
+            Tu descuento <strong>VIP del 70%</strong> ya está activo.<br>
+            Disfruta la experiencia CDE.
+        </p>
+
+        <button id="btnContinuar" class="btn-soporte vip-btn">
+            Continuar
+        </button>
+    </div>
+`;
+
+btnSoporteAceptar.style.display = 'none';
+flecha.style.display = 'none'; 
+}
+
+        
+    }
+
+});
+document.addEventListener('click', e => {
+    if (e.target.id === 'btnContinuar') {
+        modalVipActivo = false;      // salir modo VIP
+        cerrar.style.display = 'block'; // restaurar X
+        cerrarModal();
+    }
+});
+
+
+    </script>
+
+</html>
