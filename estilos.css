@@ -9,15 +9,15 @@ body {
 }
 .video-fondo {
     
-    position: fixed;       /* Fijo sobre toda la pantalla */
+    position: fixed;       
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* Mantiene proporción y cubre toda el área */
-    object-position: top;  /* Muestra la parte superior del video si quieres */
+    object-fit: cover;     
+    object-position: top;  
     z-index: -100;   
-    opacity: 0.6;        /* Detrás de todo el contenido */
+    opacity: 0.6;        
 }
 .horizontal {
     background: linear-gradient(to left, #a47, #2ff);
